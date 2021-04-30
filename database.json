@@ -1,33 +1,14 @@
 {
-  "users": [],
-  "rooms": [
+  "users": [
     {
-      "id": 1,
-      "name": "Pokój unarny",
-      "beds": 1,
-      "guests": 1,
-      "price": 170
+      "login": "maciej",
+      "password": "zaleski1234",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Pokój binarny",
-      "beds": 1,
-      "guests": 2,
-      "price": 240
-    },
-    {
-      "id": 3,
-      "name": "Pokój trójkowy",
-      "beds": 2,
-      "guests": 3,
-      "price": 290
-    },
-    {
-      "id": 4,
-      "name": "Pokój czwórkowy",
-      "beds": 2,
-      "guests": 4,
-      "price": 340
+      "login": "Maciej",
+      "password": "Zaleski12345",
+      "id": 2
     }
   ],
   "treatments": [
@@ -36,50 +17,94 @@
       "name": "Masaż rozgrzanym monitorem",
       "area": "back",
       "time": 30,
-      "price": 80
+      "price": 80,
+      "image": "<i class='fas fa-desktop'></i>"
     },
     {
       "id": 2,
       "name": "Biczowanie kablem od myszy",
       "area": "back",
       "time": 20,
-      "price": 70
+      "price": 70,
+      "image": "<i class='fas fa-plug'></i>"
     },
     {
       "id": 3,
       "name": "Peeling odłamkami płyty CD",
       "area": "face",
       "time": 15,
-      "price": 50
+      "price": 50,
+      "image": "<i class='fas fa-compact-disc'></i>"
     },
     {
       "id": 4,
       "name": "Pedicure woskiem z USB",
       "area": "legs",
       "time": 25,
-      "price": 100
+      "price": 100,
+      "image": "<i class='fab fa-usb'></i>"
     },
     {
       "id": 5,
       "name": "Manicure analogowo-cyfrowy",
       "area": "hands",
       "time": 45,
-      "price": 150
+      "price": 150,
+      "image": "<i class='fab fa-draft2digital'></i>"
     },
     {
       "id": 6,
       "name": "Kąpiel w gorącej kawie",
       "area": "body",
       "time": 60,
-      "price": 200
+      "price": 200,
+      "image": "<i class='fas fa-shower'></i>"
     },
     {
       "id": 7,
       "name": "Depilacja dyskiem twardym",
       "area": "body",
       "time": 45,
-      "price": 120
+      "price": 120,
+      "image": "<i class='fas fa-hdd'></i>"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Pokój unarny",
+      "description": "Pokój pierwszy, z widokiem na jedno morze. Wyposażony w jeden TV i jedną łazienkę.",
+      "beds": 1,
+      "guests": 1,
+      "price": 170,
+      "image": "<i class='fas fa-dice-one'></i>"
+    },
+    {
+      "id": 2,
+      "name": "Pokój binarny",
+      "description": "Pokój drugi. Nazwany i wystylizowany na korzyść dwójkowego systemu liczbowego Azteków. Ofiary z ludzi nieobowiązkowe.",
+      "beds": 1,
+      "guests": 2,
+      "price": 240,
+      "image": "<i class='fas fa-dice-two'></i>"
+    },
+    {
+      "id": 3,
+      "name": "Pokój trójkowy",
+      "description": "Pokój trzeci. Dwa łóżka dla trojga gości, umiarkowana cena. ",
+      "beds": 2,
+      "guests": 3,
+      "price": 290,
+      "image": "<i class='fas fa-dice-three'></i>"
+    },
+    {
+      "id": 4,
+      "name": "Pokój czwórkowy",
+      "description": "Pokój czwarty, największy bo dla 4 gości. Dwa łóżka TV, łazienka.",
+      "beds": 2,
+      "guests": 4,
+      "price": 340,
+      "image": "<i class='fas fa-dice-four'></i>"
     }
   ]
 }
- 

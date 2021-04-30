@@ -1,0 +1,285 @@
+$color1: rgb(21, 235, 21);
+$color2: rgb(49, 72, 206);
+$font1: 'Courgette', cursive;
+$width1: 120px;
+$width2: 400px;
+$height1: 120px;
+
+*{
+box-sizing: border-box;
+}
+.delete{
+    display: block;
+}
+.result, .result2{
+    color: black;
+    clear: both;
+    width: $width2;
+    float: left;
+}
+.result{
+    width: 350px;
+}
+.delete{
+    float: right;
+    width: $width1;
+}
+.result, .delete, .inpt, .sub{
+display: inline-block;
+
+}
+.inpt{
+  float: right;
+}
+.sub{
+    float: right;
+    width: 47px;
+    height: 25px;
+    margin-left: 10px;
+}
+.ticketNum{
+    width: 55px;
+    border-radius: 5px;
+    box-shadow:none;
+    border: 1px solid $color1
+}
+.result2, .delete{
+    display: inline-block;
+}
+.btn0, .btn1{
+    border-radius: 20px;
+    background-color: $color1;
+    color: floralwhite;
+    width: 100px;
+    height: 25px;
+    padding: 0 0 15px 0;
+    font-size: 14px;
+    float: right;
+    border: 1px solid ghostwhite;
+}
+.f5{
+    border-radius: 20px;
+    background-color: $color2;
+    color: floralwhite;
+    width: 100px;
+    height: 25px;
+    padding: 0 0 15px 0;
+    font-size: 14px;
+    border: 1px solid ghostwhite;
+    float: right;
+    position: absolute;
+    right: 300px;
+}
+main{
+    
+    height: auto;
+}
+footer{
+    background-color:rgb(121, 154, 158);
+    width: 100%;
+    min-height: $width1;
+    bottom: 0;
+    margin-top: 5%;
+}
+footer p{
+    padding: 30px;
+    font-family: $font1;
+}
+.room, .treatment{
+    padding-left: 25px;
+}
+.a1, .a0{
+    display: inline-block !important;
+    max-width: 47%;
+}
+.a0{
+    margin-left: 20px;
+}
+.a1{
+    margin-left: 25px;
+}
+ .refresh{
+    width: $width2/2;
+}
+.sum1, .sum2{
+    display: inline-block;
+}
+.a1{
+    vertical-align:top;
+}
+@-moz-document url-prefix() {
+
+}
+ .summary{
+    width: 350px;
+    height: 70px;
+    border: 1px solid $color1;
+    margin-left: 20px;
+    padding: 1%;
+    margin-top: 6%;
+    border-radius: 10px;
+}
+.sum1, .sum2{
+    color: red;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+.log{
+    color:$color2;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    padding: 2%;
+}
+.log2{
+    color:$color2;
+    font-size: 18px;
+    font-weight: 900;
+    float: right;
+    margin-right:5%;
+}
+.addToCart{
+    clear: both;
+    margin-top: 25px;
+    border-radius: 20px;
+    background-color: $color1;
+    color: floralwhite;
+    width: 130px;
+    height: 55px;
+    padding:5px;
+    font-size: 17px;
+    border: 1px solid ghostwhite;
+    font-family: $font1
+}
+.time1, #start, #end{
+    border-radius: 5px;
+    border: 1px solid $color1;
+}
+.price, .price2, .price3{
+    display: inline;
+    float: left;
+    color: $color2;
+    font-family: $font1;
+}
+.form-group{
+    max-width: 400px;
+    margin-left: 25px;
+}
+form button{
+    margin-top: 25px;
+    border-radius: 20px;
+    background-color: $color1;
+    color: floralwhite;
+    width: 130px;
+    height: 55px;
+    padding:5px;
+    font-size: 17px;
+    border: 1px solid ghostwhite;
+    font-family: $font1;
+    margin-left: 25px;
+}
+.price{
+ width: 335px;
+}
+.price3{
+    padding-left: 5px;
+}
+header{
+    background-image:url('./imgs/z5.jpg');
+    width: 100%;
+    height: 530px;
+}
+header h1{
+    color:rgb(230, 230, 230);
+    color:ghostwhite;
+    color: green;
+    padding-top: 40px;
+    text-decoration:  underline  double green;
+    text-underline-position: below;
+    text-underline-offset: 15px;
+    vertical-align: top;
+    font-family: 'Lora', serif;
+}
+nav{
+    width: 75%;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right:0;
+    bottom: 22%;
+ 
+}
+nav button{
+    background: none;
+    color:rgb(230, 230, 230);
+    border: 0;
+    font-weight: 900;
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    font-family: $font1;
+    text-shadow: 1px 1px 2px #030303;
+    letter-spacing: 3px;
+}
+nav button:hover{
+    color:green;
+}
+.logo{
+    width: $width1;
+    height: $height1;
+    margin: 0 30px;
+  
+}
+.logo, header h1{
+display: inline-block;
+}
+.fa-spa{
+   width: 100% !important;
+   height: 100% !important;
+}
+.t0{
+    padding: 20px;
+    max-width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+.fa-w-14, .fa-w-12, .fa-w-16, .fa-w-18, .fa-w-20, .fa-w-15{
+    width: $width1 !important;
+    height:$height1 !important;
+}
+.fa-pulse{
+    width: 30px !important;
+    height:30px !important;
+}
+.img0{
+    clear: both;
+   vertical-align: top;
+   width: $width1;
+   height: $height1;
+   float: right;
+   margin-top: -60px;
+}
+article{
+    height: auto;
+    min-height: 150px;
+    margin-top: 10px;
+
+}
+article p{
+    max-width: 70%;
+    padding: 20px;
+}
+article p, .img0{
+    display: inline-block;
+}
+
+h4, h2{
+    font-family: $font1;
+    padding: 20px;
+    text-align: center;
+}
+h4{
+    cursor: pointer;
+}

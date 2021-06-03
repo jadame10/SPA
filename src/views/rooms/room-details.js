@@ -25,13 +25,17 @@ export const roomDetails = (roomId, roomName, roomPrice, diffDays, roomI) => {
 
     section.find('.addToCart').on('click', event => {
     event.preventDefault();
-    alert(`${roomName} dodany`);
-     document.cookie = `NumerID${roomId}=${roomId}` + ' ' +  `${roomName}` + ' ' +  `${roomPrice}` + ' zł' + ' ' + 'liczba dni' + " "  + `${diffDays}` + "  "; 
-     let l =  $("input[name='trip-start']").val();
-     let r =  $("input[name='trip-end']").val();
-     if(!l || !r){
-        alert(`Wybierz datę przed dodaniem pokoju`);
+    let l =  $("input[name='trip-start']").val();
+    let r =  $("input[name='trip-end']").val();
+    console.log(l);
+    if(l === '' || r === ''){
+     alert(`Wybierz datę przed dodaniem pokoju`);
+     }else{
+        alert(`${roomName} dodany`);
+        document.cookie = `NumerID${roomId}=${roomId}` + ' ' +  `${roomName}` + ' ' +  `${roomPrice}` + ' zł' + ' ' + 'liczba dni' + " "  + `${diffDays}` + "  "; 
+   
      }
+   
     });
     
     axios
@@ -42,7 +46,6 @@ export const roomDetails = (roomId, roomName, roomPrice, diffDays, roomI) => {
             roomPrice = room.price;
             roomI = room.image;
 
-            console.log(roomI);
             const {name, description} = room;
             section.find('.room-name').text(name).css('font-weight', 'bold');
             section.find('.room-desc').text(description);
@@ -50,19 +53,26 @@ export const roomDetails = (roomId, roomName, roomPrice, diffDays, roomI) => {
         
         let end;
         let dealDate = () => {
+            let y = section.find('.addToCart');
+            //let y = document.querySelector('.addToCart');
+            y.disabled =true;
             let today = new Date().toISOString().split('T')[0];
-             let tommorrow = new Date();
+            let tommorrow = new Date();
             tommorrow.setYear(tommorrow.getFullYear() + 1);
             let m = tommorrow.toISOString().split('T')[0];
-             let start =  $(section).find("input[name='trip-start']")[0];
+            let start =  $(section).find("input[name='trip-start']")[0];
              end = $(section).find("input[name='trip-end']")[0];
             start.setAttribute('min', today);
             start.setAttribute('max', m);
             end.setAttribute('min', today);
             end.setAttribute('max', m);
             end.addEventListener('change', () => {
-            if(parseInt(start.value.replace(/-/g,""),10) > parseInt(end.value.replace(/-/g,""),10)){
+            if(parseInt(start.value.replace(/-/g,""),10) > parseInt(end.value.replace(/-/g,""),10)-1){
                 alert('Data przyjazdu musi być wczesniejsza od daty wyjazdu.');
+                y.prop('disabled', true);
+             }else{
+                alert('Data przyjazdu i wyjazdu prawidłowe.');
+                y.prop('disabled', false);
              }
         })
         }
